@@ -1,7 +1,9 @@
 // Config constant globals
-LZCOUNT = 86;
+DROPOFFLZCOUNT = 8;
+PICKUPLZCOUNT = 1;
+
 STARTPRIORITY = 1000;
-EXLUDESPAWNLZS = [(missionNamespace getVariable "lz33")]; // Exclude the airport location near spawn marker
+EXLUDESPAWNLZS = [];//(missionNamespace getVariable "pickup")]; // Exclude the airport location near spawn marker
 
 // Precompile code
 execVM "precompile.sqf";

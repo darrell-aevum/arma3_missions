@@ -5,7 +5,7 @@ private _returnValue = false;
 
 scopeName "main";
 {
-    private _plr = _x;
+    private _plr = _x;    
     private _veh = vehicle _plr;
     if ( (_plr != _veh) && ([_veh] call isLanded) && (_veh in _triggerList) ) then
     {

@@ -2,7 +2,7 @@
 private _excludeList = _this select 0;
 private _returnValue = false;
 
-private _candidates = lzList;
+private _candidates = dropoffList;
 if (!(_excludeList isEqualTo false)) then
 {
    _candidates = _candidates - _excludeList;
@@ -34,7 +34,7 @@ while {true} do
         breakOut "selectloop";
     };
     _i = _i + 1;
-    if (_i > LZCOUNT) then
+    if (_i > DROPOFFLZCOUNT) then
     {
         _returnValue = false;
         breakOut "selectloop";

@@ -8,10 +8,9 @@ private _assignToPlayer = driver _bindToVehicle;
 private _enemies = [];
 private _lzhot = false;
 //Make the LZ hot if the roll demands it
-if ((random 1) < hotLZChance) then
-{
-    _lzhot = true
-};
+ 
+ _lzhot = true;
+ 
 private _lzAA = false;
 if ((random 1) < AAChance) then
 {
@@ -22,6 +21,7 @@ private _taskType = "move";
 if (_lzhot) then
 {
     _taskType = "attack";
+    _enemies = _enemies + ([_lzLocation, _lzAA] call createEnemySquads);
     _enemies = _enemies + ([_lzLocation, _lzAA] call createEnemySquads);
 };
 

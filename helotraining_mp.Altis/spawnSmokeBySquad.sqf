@@ -1,4 +1,4 @@
-//diag_log format["spawnSmokeBySquad called, _this: %1", _this];
+//diag_log format["spawnSmokeBySquad called, _this: %1", _this];   
 private _bindToSquad = _this select 0;
 private _smokeTgt = _this select 1;
 private _smokeLocation = getPos _smokeTgt;

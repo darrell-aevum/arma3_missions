@@ -28,13 +28,21 @@ _AAParam = paramsArray select 4;
 AAChance = if (_AAParam > 0) then {_AAParam / 100} else {0.0};
 publicVariable "AAChance";
 
-lzList = [];
+dropoffList = [];
 _x = 0;
-while {_x < LZCOUNT} do
+while {_x < DROPOFFLZCOUNT} do
 {
-	[lzList, (missionNamespace getVariable (format["lz%1", _x + 1]))] call BIS_fnc_arrayPush;
+	[dropoffList, (missionNamespace getVariable (format["dropOff_%1", _x + 1]))] call BIS_fnc_arrayPush;
 	_x = _x + 1;
-};
+}; 
+
+pickupList = [];
+_x = 0;
+while {_x < PICKUPLZCOUNT} do
+{
+	[pickupList, (missionNamespace getVariable (format["pickup_%1", _x + 1]))] call BIS_fnc_arrayPush;
+	_x = _x + 1;
+}; 
 
 LZMinDistace = paramsArray select 5;
 publicVariable "LZMinDistace";
